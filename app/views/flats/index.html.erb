@@ -1,0 +1,23 @@
+<h1 class="text-center mt-5 mb-5" >Index Flats (<%= Flat.count %>)</h1>
+
+
+<div class="container">
+  <div class="row">
+  <% @flats.each do |flat| %>
+    <div class="bg-light m-3 p-2 border border-secondary rounded col-sm">
+      <h2><%= flat.name %> </h2>
+      <ul class="list-unstyled" >
+        <li> Address: <%= flat.address%> </li>
+        <br>
+        <li> Description: <%= flat.description%> </li>
+        <br>
+        <li> Price per night: <%= flat.price_per_night%> </li>
+        <br>
+        <li> Num of guests: <%= flat.number_of_guests%> </li>
+        <li><i class="fa-solid fa-dollar-sign"></i></li>
+        <br>
+      </ul>
+    </div>
+  <% end %>
+  </div>
+</div>
